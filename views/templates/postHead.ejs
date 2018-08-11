@@ -1,0 +1,51 @@
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#8C43FF">
+
+<!-- SEO tags -->
+    <meta name="description" content="<%= post.meta_description %>">
+    <meta name="keywords" content="Web development tutorials, labs, code labs, 
+    Imran,Imran-Khan,imran khan,imran,Imran Khan,web Developer, programmer, software, engineer, IT,
+     computer,devhoot,dev,hoot,devHoot,Dev Hoot, Devhoot Dev hoot,developer, India developer, india web
+      developer,india,vadodara,gujarat,asia,earth, Video courses, online learning,e-learning, front-end, back end, full stack dev, free tutorials,
+      free code labs">
+
+       <!--  Twitter Cards -->
+    <meta name="twitter:card" content="<%= post.summary %>"></meta>
+    <meta name="twitter:site" content="@DevHoot"></meta>
+    <meta name="twitter:creator" content="<%= post.author %>`" />
+    <!-- Open Graph protocol markup -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<% post.title %>">
+    <meta property="og:image" content="<%= post.featured_image %>">
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:site_name" content="DevHoot">
+    <meta property="og:url" content="<%= post.url %>" />
+    <meta property="og:description" content="<%= post.meta_description %>">
+
+    <title><%= post.title%></title>
+
+    <!-- AdSense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9779862910631944",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/jpeg" href="images/myAvatar.jpeg" />
+    <link rel="shortcut icon" type="image/jpeg" href="https://devhoot.herokuapp.com/images/myAvatar.jpeg" />
+
+<!-- styles -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="../../main.css" rel="stylesheet" type="text/ejs">

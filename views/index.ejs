@@ -1,0 +1,36 @@
+<head>
+    <% include templates/head.ejs%>
+</head>
+<% include templates/header.ejs%>
+
+    <div class="container">
+        <h2>Blog</h2>
+        <hr>
+        <% posts.forEach(function(post) { %>
+            <a href="/blog/<%= post.slug %>">
+                 <h2 class="ml-2"><%= post.title %></h2>
+                 <div class="container">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <img style="height:35%;max-width:400px" src="<%= post.featured_image %>">
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                         <p style="color:gray;text-decoration:none"><%= post.summary %> <br><br> 
+                         Author : <%= post.author.first_name %> <%= post.author.last_name %>
+                        </p>
+                      </div>
+                 </div>  <hr>   
+
+            </a>    <br>
+                    <% }); %>
+
+                        <% if (previous_page) { %>
+                            <a href="/blog/p/<%= previous_page %>">Prev</a>
+                            <% } %>
+
+                                <% if (next_page) { %>
+                                    <a href="/blog/p/<%= next_page %>">Next</a>
+                                    <% } %>
+                                        <div>
+                                        <br>
+                                           <div class="float=right"><% include templates/footer.ejs%></div>

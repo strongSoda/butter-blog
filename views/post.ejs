@@ -1,0 +1,41 @@
+<head>
+    <% include templates/postHead.ejs%>
+</head>
+<% include templates/postHeader.ejs%>
+
+
+    <div class="container main">
+
+        <h2>
+            <%= post.title %>
+        </h2>
+
+        Published
+        <%= published.getDate() %>/
+            <%= published.getMonth()+1 %>/
+                <%= published.getFullYear() %>
+
+                    <% if (post.categories.length > 0) { %>
+                        in
+                        <% post.categories.forEach(function(cat) { %>
+                            <span class="text-center">
+                                <a href="/category/<%= cat.slug %>">
+                                    <%= cat.name %>
+                                </a>
+                            </span>
+                            <% }); %>
+                                <% } %>
+
+                                    <br>
+
+                                   Author: <%= post.author.first_name %>
+                                        <%= post.author.last_name %>
+
+                                        <br><br>
+
+                                            <div>
+                                                <%- post.body %>
+                                            </div>
+
+                                            </div>
+                                                <% include templates/postFooter.ejs%>
