@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 var engine = require('ejs-locals');
 
 
-app.get('/', renderHome)
+app.get('/blog', renderHome)
 app.get('/blog/p/:page', renderHome)
 
 app.listen(3000)
