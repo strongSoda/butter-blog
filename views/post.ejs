@@ -38,10 +38,34 @@
                                     </span>    
 
                                         <br><br>
-
-                                            <div style="font-family:'kanit',sans-serif;color:##292929;max-width:800px;min-width:auto;font-size:1.1em" id="body">
+                                                
+                                            <div style="font-family:'kanit',sans-serif;color:##292929;font-size:1.1em" id="body">
                                                 <%- post.body %>
                                             </div>
+                                            <style>
+                                            @media screen and (max-width:800px) {
+                                                #body p img  {
+                                                  height: 25vw;
+                                                  width: auto;
+                                              } 
+
+                                              #body {
+                                                  max-width: 70vw;
+                                              }                                               
+                                            }
+
+                                             @media screen and (max-width:500px) {
+                                                #body p img  {
+                                                  height: 55vw;
+                                                  width: auto;
+                                              } 
+
+                                              #body {
+                                                  max-width: 100vw;
+                                              }                                               
+                                            }
+                                              
+                                            </style>
                                          </div>
                                        </div>
                                                 <% include templates/postFooter.ejs%>
