@@ -12,7 +12,7 @@ app.get('/blog/p/:page', renderHome)
 app.get("/devhoot", function(req, res) {
 
   res.status(301).redirect("http://devhoot.ooo/");
-  next;
+
 });
 app.listen(process.env.PORT || 5000);
 
