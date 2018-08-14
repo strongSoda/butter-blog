@@ -31,17 +31,26 @@
         crossorigin="anonymous"></script>
 
 
-    <!-- Side Nav -->
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.1)";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.body.style.backgroundColor = "white";
-        }
-    </script>
+    <!-- Disquss -->
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            
+            var disqus_config = function () {
+            this.page.url = <%= post.url%> // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = <%= post.title %>; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://http-www-devhoot-ooo.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
