@@ -9,7 +9,7 @@ var engine = require('ejs-locals');
 app.get('/blog', renderHome)
 app.get('/blog/p/:page', renderHome)
 
-app.listen(3000)
+app.listen(process.env.PORT || 5000);
 
 function renderHome(req, res) {
   var page = req.params.page || 1;
