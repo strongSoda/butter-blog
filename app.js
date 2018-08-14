@@ -1,9 +1,10 @@
 var express = require('express');
 var butter = require('buttercms')('1f289135f7c46e235ad2c9923f1b6426d7d5c9a3');
-var app = express()
+var engine = require('ejs-locals');
+var app = express();
 
 app.set('view engine', 'ejs');
-var engine = require('ejs-locals');
+app.use(express.static(__dirname + '/public'));
 
 
 app.get('/blog', renderHome)
