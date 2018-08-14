@@ -7,7 +7,7 @@
     <div class="container main">
       <div class="col-sm-12">  
       <div class="row">
-        <h2 style="font-family:'kanit',sans-serif" class="col-sm-12">
+        <h2 style="font-family:'kanit',Arial,sans-serif" class="col-sm-12">
             <%= post.title %>
         </h2>
       </div>  
@@ -32,14 +32,14 @@
         </div>     
                                     <br>
 
-                                   <span style="color:gray;font-family:'kanit',sans-serif"><img style="max-height:45px;"
+                                   <span style="color:gray;font-family:'kanit',Arial,sans-serif"><img style="max-height:45px;"
                                     src="<%= post.author.profile_image%>" alt="Author image"> 
                                     Author: <%= post.author.first_name %> <%= post.author.last_name %> <a href="<%= post.author.linkedin_url %>" target=blank rel=noopener><i class="fab fa-linkedin"></i></a>
                                     </span>    
 
                                         <br><br>
                                                 
-                                            <div style="font-family:'kanit',sans-serif;color:##292929;font-size:1.1em" id="body">
+                                            <div style="font-family:'kanit',Arial,sans-serif;color:##292929;font-size:1.1em" id="body">
                                                 <%- post.body %>
                                             </div>
                                             <style>
