@@ -5,8 +5,8 @@
 
 
     <div class="container main">
-
-        <h2>
+      <div class="col-sm-12">  
+        <h2 style="font-family:'kanit',sans-serif">
             <%= post.title %>
         </h2>
 
@@ -28,14 +28,16 @@
 
                                     <br>
 
-                                   Author: <%= post.author.first_name %>
-                                        <%= post.author.last_name %>
+                                   <span style="color:gray;font-family:'kanit',sans-serif"><img style="max-height:45px;"
+                                    src="<%= post.author.profile_image%>" alt="Author image"> 
+                                    Author: <%= post.author.first_name %> <%= post.author.last_name %> <a href="<%= post.author.linkedin_url %>" target=blank rel=noopener><i class="fab fa-linkedin"></i></a>
+                                    </span>    
 
                                         <br><br>
 
-                                            <div>
+                                            <div style="font-family:'kanit',sans-serif">
                                                 <%- post.body %>
                                             </div>
-
-                                            </div>
+                                         </div>
+                                       </div>
                                                 <% include templates/postFooter.ejs%>

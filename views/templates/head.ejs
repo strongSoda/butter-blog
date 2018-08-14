@@ -28,3 +28,29 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="../../main.css" rel="stylesheet" type="text/ejs">
 
+<!-- Code to switch between different titles in browser tab -->
+<script>
+window.setInterval(function(){
+    changetitle()
+},20000); //every 10 seconds
+let title = document.querySelector('title');
+let count = 2;
+
+function changetitle(){
+ //change title here
+
+ if(count%2===0) {
+    title.innerText = 'Imran says hi';
+    console.log(count);
+    count++;
+  }
+   if(count%2!=0) {
+    title.innerText = 'DevHoot | Blogs';
+    console.log(count);
+    count--;
+  }
+   if(count>1){
+     changetitle();
+   }
+}
+</script>
