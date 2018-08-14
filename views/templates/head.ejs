@@ -52,7 +52,9 @@ function changetitle(){
     count--;
   }
    if(count>1){
-     changetitle();
+     window.setInterval(function(){
+    changetitle()
+},10000); //every 10 seconds
    }
 }
 </script>
