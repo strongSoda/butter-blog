@@ -1,8 +1,18 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
 
     <div class="container">
-        <div class="navbar-header">
-            <a href="/blog" class="navbar-brand" style="font-size:24px;text-decoration:none"><i class="fas fa-home"></i> Back Home</a></div>
-            <hr>
-    </div>
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="/blog"><i class="fas fa-home"></i> Back to Home</a>
+</nav>
 </div>
+<style>
+   .navbar-brand {
+       padding-left: 42vw;
+   }
+
+   @media screen and (max-width:800px) {
+       .navbar-brand {
+       padding-left: 22vw;
+   }   
+   }
+</style>
