@@ -13,16 +13,17 @@
       free code labs">
 
        <!--  Twitter Cards -->
-    <meta name="twitter:card" content="<%= post.summary %>"></meta>
-    <meta name="twitter:site" content="@DevHoot"></meta>
-    <meta name="twitter:creator" content="<%= post.author.first_name %>" />
+    <meta name="twitter:card" content="<%= post.summary %>">
+    <meta name="twitter:site" content="@DevHoot">
+    <meta name="twitter:creator" content="<%= post.author.first_name %>">
+    <meta name="twitter:image" content="<%= post.featured_image %>">
     <!-- Open Graph protocol markup -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="<% post.title %>">
     <meta property="og:image" content="<%= post.featured_image %>">
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:site_name" content="DevHoot">
-    <meta property="og:url" content="<%= post.url %>" />
+    <meta property="og:url" content="<%= post.url %>" >
     <meta property="og:description" content="<%= post.meta_description %>">
 
     <title><%= post.title%></title>
