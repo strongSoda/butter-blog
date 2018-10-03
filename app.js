@@ -7,13 +7,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 
-app.get('/blog', renderHome)
-app.get('/blog/p/:page', renderHome)
-app.get("/devhoot", function(req, res) {
 
-  res.status(301).redirect("http://devhoot.ooo/");
-
-});
 app.listen(process.env.PORT || 5000);
 
 function renderHome(req, res) {
